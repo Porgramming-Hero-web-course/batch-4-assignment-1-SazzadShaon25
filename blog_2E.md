@@ -45,6 +45,8 @@ fetchData<any>(url, (error, data) => {
 
 ### 2. Promises Example
 
+```typescript
+
 function fetchData<T>(url: string): Promise<T> {
   return fetch(url)
     .then((response) => {
@@ -67,6 +69,8 @@ fetchData<any>(url)
 
 ---
 ### 3. Async/await Example
+
+```typescript
 
 async function fetchData<T>(url: string): Promise<T> {
   const response = await fetch(url);
