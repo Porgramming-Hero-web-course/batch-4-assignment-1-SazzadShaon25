@@ -41,7 +41,7 @@ fetchData<any>(url, (error, data) => {
     console.log("Fetched data:", data);
   }
 });
-```typescript
+```
 
 ### 2. Promises Example
 
@@ -67,7 +67,7 @@ fetchData<any>(url)
     console.error("Fetch error:", error);
   });
 
-```typescript
+```
 ### 3. Async/await Example
 
 ```typescript
