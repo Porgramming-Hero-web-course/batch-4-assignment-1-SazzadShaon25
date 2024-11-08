@@ -94,6 +94,6 @@ const url = "https://api.example.com/data";
     console.error("Fetch error:", error);
   }
 })();
-```typescript
+```
  We can see that aync/await gives more easy readability code that's why is better to write and handle than callback and promises
 
