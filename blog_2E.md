@@ -20,7 +20,7 @@ Below, I am showing the same code first by using callbacks, then promises, and f
 ### 1. Callback Example
 
 ```typescript
-// Define types for callback
+
 type Callback<T> = (error: Error | null, data: T | null) => void;
 
 // Function to fetch data with a callback
@@ -41,9 +41,10 @@ fetchData<any>(url, (error, data) => {
     console.log("Fetched data:", data);
   }
 });
+---
 
 ### 2. Promises Example
-// Define a function to fetch data with a promise
+
 function fetchData<T>(url: string): Promise<T> {
   return fetch(url)
     .then((response) => {
@@ -54,7 +55,7 @@ function fetchData<T>(url: string): Promise<T> {
     });
 }
 
-// Example usage
+
 const url = "https://api.example.com/data";
 fetchData<any>(url)
   .then((data) => {
@@ -63,8 +64,10 @@ fetchData<any>(url)
   .catch((error) => {
     console.error("Fetch error:", error);
   });
+
+---
 ### 3. Async/await Example
-// Define an async function to fetch data
+
 async function fetchData<T>(url: string): Promise<T> {
   const response = await fetch(url);
   
@@ -76,7 +79,7 @@ async function fetchData<T>(url: string): Promise<T> {
   return data;
 }
 
-// Example usage
+
 const url = "https://api.example.com/data";
 
 (async () => {
